@@ -1,0 +1,117 @@
+ 
+0: kom0: 7 6 leader?: 0 min ID: 0
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 1
+3: kom0: 1 leader?: 0 min ID: 2
+4: kom0: 2 leader?: 0 min ID: 3
+5: kom0: 3 leader?: 0 min ID: 4
+6: kom0: 4 leader?: 0 min ID: 5
+7: kom0: 5 leader?: 0 min ID: 6
+ 
+0: kom0: 6 5 leader?: 0 min ID: 0
+1: kom0:  leader?: 0 min ID: 0
+2: kom0: 0 leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 1
+4: kom0: 1 leader?: 0 min ID: 2
+5: kom0: 2 leader?: 0 min ID: 3
+6: kom0: 4 3 leader?: 0 min ID: 5
+7: kom0:  leader?: 0 min ID: 5
+ 
+0: kom0: 5 {} leader?: 0 min ID: 0
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 0
+3: kom0: 0 leader?: 0 min ID: 
+4: kom0: {} leader?: 0 min ID: 1
+5: kom0: 1 leader?: 0 min ID: 2
+6: kom0: 4 3 2 leader?: 0 min ID: 5
+7: kom0:  leader?: 0 min ID: 
+ 
+0: kom0: {} 4 leader?: 0 min ID: 0
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 0
+4: kom0: 0 leader?: 0 min ID: 
+5: kom0: {} leader?: 0 min ID: 1
+6: kom0: 3 2 1 leader?: 0 min ID: 4
+7: kom0:  leader?: 0 min ID: 4
+ 
+0: kom0: 4 leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} leader?: 0 min ID: 0
+5: kom0: 0 leader?: 0 min ID: 
+6: kom0: 2 1 {} leader?: 0 min ID: 3
+7: kom0: 3 leader?: 0 min ID: 4
+ 
+0: kom0: 3 leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 0
+5: kom0:  leader?: 0 min ID: 0
+6: kom0: 1 {} 0 leader?: 0 min ID: 2
+7: kom0: 2 leader?: 0 min ID: 3
+ 
+0: kom0: 3 2 leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} 0 {} leader?: 0 min ID: 1
+7: kom0: 1 leader?: 0 min ID: 2
+ 
+0: kom0: 3 2 1 leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: 0 {} {} leader?: 0 min ID: 
+7: kom0: {} leader?: 0 min ID: 1
+ 
+0: kom0: 2 1 {} leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} {} {} leader?: 0 min ID: 0
+7: kom0: 0 leader?: 0 min ID: 
+ 
+0: kom0: 1 {} 0 leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} leader?: 0 min ID: 
+3: kom0: {} leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} {} {} leader?: 0 min ID: 
+7: kom0: {} leader?: 0 min ID: 0
+ 
+0: kom0: {} 0 {} leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} {} leader?: 0 min ID: 
+3: kom0:  leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} {} {} leader?: 0 min ID: 
+7: kom0: {} leader?: 0 min ID: 
+ 
+0: kom0: 0 {} {} leader?: 0 min ID: 
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} {} leader?: 0 min ID: 
+3: kom0:  leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} {} {} {} leader?: 0 min ID: 
+7: kom0:  leader?: 0 min ID: 
+ 
+0: kom0: {} {} {} leader?: 1 min ID: 0
+1: kom0:  leader?: 0 min ID: 
+2: kom0: {} {} leader?: 0 min ID: 
+3: kom0:  leader?: 0 min ID: 
+4: kom0: {} {} leader?: 0 min ID: 
+5: kom0:  leader?: 0 min ID: 
+6: kom0: {} {} {} {} leader?: 0 min ID: 
+7: kom0:  leader?: 0 min ID: 

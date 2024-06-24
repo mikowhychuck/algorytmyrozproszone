@@ -1,0 +1,39 @@
+
+monitor konsprod
+{
+    const int buf_size = 50;
+    int buf[buf_size];
+    int buf_czyt = 0;
+    int buf_pisz = 0;
+
+    void Produkuj()
+    {
+        int el = random(1000);
+        cout << "produkuje element: " << el << endl;
+        buf[buf_pisz] = el;
+        buf_pisz++;
+        if (buf_pisz >= buf_size)
+            buf_pisz = 0;
+    }
+
+    void Konsumuj(int nr)
+    {
+        int el;
+        el = buf[buf_czyt];
+        cout << "Konsument nr " << nr << " zjada " << el << endl;
+        buf_czyt++;
+        if (buf_czyt >= buf_size)
+            buf_czyt = 0;
+    }
+}
+
+void proc()
+{
+    int przelew;
+
+    while (1)
+    {
+        przelew = random(100);
+        DokonajPrzelewu(przelew);
+    }
+}

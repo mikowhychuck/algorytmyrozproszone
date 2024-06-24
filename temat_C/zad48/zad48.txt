@@ -1,0 +1,35 @@
+1 - PUSH->PULL
+Gubienie pakietów w tej architekturze może nastąpić w 
+kilku sytuacjach. Po pierwsze wtedy kiedy klient PULL jest przeciążony -
+wtedy nie jest w stanie przetworzyć wiadomości. Może też być tak, że 
+PUSH wysyła wiadomości szybciej niż PULL jest w stanie je odebrać.
+Po drugie, gubienie pakietów może wystapić kiedy zostanie przekroczona
+wewnętrzna kolejka buforowa zmq. 
+
+2 - PUB -> SUB
+Tutaj może być kilka powodów gubienia pakietów:
+- może być po prostu brak subskrybentów (SUB) - wtedy PUB wysyła pakiety, ale nikt
+ich nie odbiera
+- opóźnienia w dostarczaniu - PUB dmoyślnie nie przechowuje wiadmości, a więc jeśli
+SUB nie jest dostępny w momencie wysyłania, to wiadomość jest gubiona.
+
+rozwiązania:
+- można zaimplementować w PUB funkcję, zapisywania wysyłanych wiadomości, i na 
+przykład wysyłać je kilkukrotnie
+- Wprowadzenie heartbeatów, aby subskrybenci mogli sprawdzać, czy są połączeni 
+z wydawcą i reagować na brak wiadomości.
+- zaimpementowanie mechanizmu potwierdzeń, żeby subskrybent potwiedzał odczytanie
+wiadomości, a w przypadku braku potwierdzenia PUB mógłby ją  wysłać ponownie
+
+3 - PUB -> XSUB|XPUB -> SUB
+W tej architekturze potencjalne powody gubienia pakietów są w sumie podobne do (2).
+- przeciążenia - XSUB lub XPUB może być przeciążone i wtedy wiadomości są gubione.
+- brak subskrybentów - jeżeli żaden subskrybent nie jest podłączony, no to nikt
+nie odbiera wiadomości.
+- przepełnienie bufora - gdy bufor XPUB lub XSUB jest pełen
+
+rozwiązania:
+- Wprowadzenie mechanizmu, który pozwala na regulowanie tempa wysyłania 
+wiadomości przez PUB w zależności od zdolności odbierania przez subskrybentów.
+- Przechowywanie wiadomości w buforze na XPUB, które mogą być 
+przesyłane ponownie, gdy subskrybent będzie gotowy.

@@ -1,0 +1,67 @@
+const int buf_size = 50;
+int buf[buf_size];
+int buf_czyt = 0;
+int buf_pisz = 0;
+
+int el = 0;
+
+void Produkuj()
+{
+    el++;
+
+    buf[buf_pisz] = el;
+    buf_pisz++;
+    if (buf_pisz >= buf_size)
+        buf_pisz = 0;
+}
+
+void Konsumuj(int nr)
+{
+    int el;
+    el = buf[buf_czyt];
+    cout << "Konsument nr " << nr << " zjada " << el << endl;
+
+    buf_czyt++;
+    if (buf_czyt >= buf_size)
+        buf_czyt = 0;
+}
+
+binarysem S = 1;
+semaphore Wolne = buf_size;
+semaphore Pelne = 0;
+
+void Producent()
+{
+    while (1)
+    {
+        wait(Wolne);
+        wait(S);
+        Produkuj();
+        signal(S);
+        signal(Pelne);
+    }
+}
+
+void Konsument(int nr)
+{
+    int atrapa;
+
+    while (1)
+    {
+        wait(Pelne);
+        wait(S);
+        Konsumuj(nr);
+        signal(S);
+        signal(Wolne);
+    }
+}
+
+void main()
+{
+    cobegin
+    {
+        Konsument(1);
+        Konsument(2);
+        Producent();
+    }
+}

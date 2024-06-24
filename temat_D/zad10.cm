@@ -1,0 +1,45 @@
+int widelec[5];
+int jedzenie[5];
+binarysem Waiter = 1;
+binarysem S = 1;
+
+void Filozof(int nr)
+{
+    while (1)
+    {
+
+        wait(S);
+        wait(Waiter);
+
+        widelec[nr] = widelec[nr] - 1;                     // podnosi widelec po jednej stronie
+        widelec[(nr + 1) % 5] = widelec[(nr + 1) % 5] - 1; // i po drugiej
+        jedzenie[nr] = 1;                                  // filozof zaczyna jeść
+        signal(Waiter);
+        widelec[nr] = widelec[nr] + 1;                     // opuszcza widelec
+        widelec[(nr + 1) % 5] = widelec[(nr + 1) % 5] + 1; // i po drugiej stronie
+        jedzenie[nr] = 0;                                  // kończy jedzenie
+
+        signal(S);
+    }
+}
+
+void showStatus()
+{
+    while (1)
+    {
+        cout << jedzenie[0] << jedzenie[1] << jedzenie[2] << jedzenie[3] << jedzenie[4] << endl;
+    }
+}
+
+main()
+{
+    cobegin
+    {
+        Filozof(0);
+        Filozof(1);
+        Filozof(2);
+        Filozof(3);
+        Filozof(4);
+        showStatus();
+    }
+}

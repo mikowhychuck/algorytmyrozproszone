@@ -1,0 +1,129 @@
+# REP Server
+import zmq
+import time
+
+def server(server_id):
+    context = zmq.Context()
+    socket = context.socket(zmq.REP)
+    socket.connect("tcp://localhost:5556")
+
+    while True:
+        message = socket.recv()
+        print(f"Serwer {server_id} otrzymał: {message.decode()}")
+
+        time.sleep(1)
+
+        socket.send_string(f"Serwer {server_id} odpowiedział")
+
+if __name__ == "__main__":
+    server_id = 1 
+    server(server_id)
+
+# REQ Client
+import zmq
+import time
+
+def client(client_id):
+    context = zmq.Context()
+    socket = context.socket(zmq.REQ)
+    socket.connect("tcp://localhost:5555")
+
+    for request in range(10):
+        message = f"Klient {client_id} żądanie {request}"
+        print(f"Klient {client_id} wysyła: {message}")
+        socket.send_string(message)
+
+        response = socket.recv()
+        print(f"Klient {client_id} otrzymał: {response.decode()}")
+
+        time.sleep(1)
+
+if __name__ == "__main__":
+    client_id = 1 
+    client(client_id)
+
+# proxy
+import zmq
+
+context = zmq.Context()
+
+frontend = context.socket(zmq.ROUTER)
+frontend.bind("tcp://*:5555")
+
+backend = context.socket(zmq.DEALER)
+backend.bind("tcp://*:5556")
+
+zmq.proxy(frontend, backend)
+
+frontend.close()
+backend.close()
+context.term()
+
+/// wydruk
+#uruchomiłem dwóch klientów, dwa serwery i jeden proxy
+# wydruk z klienta 1:
+Klient 1 wysyła: Klient 1 żądanie 0
+Klient 1 otrzymał: Serwer 1 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 1
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 2
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 3
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 4
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 5
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 6
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 7
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 8
+Klient 1 otrzymał: Serwer 2 odpowiedział
+Klient 1 wysyła: Klient 1 żądanie 9
+Klient 1 otrzymał: Serwer 2 odpowiedział
+#wydruk z klienta 2:
+Klient 2 wysyła: Klient 2 żądanie 0
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 1
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 2
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 3
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 4
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 5
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 6
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 7
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 8
+Klient 2 otrzymał: Serwer 1 odpowiedział
+Klient 2 wysyła: Klient 2 żądanie 9
+Klient 2 otrzymał: Serwer 1 odpowiedział
+# wydruk z serwera 1:
+Serwer 1 otrzymał: Klient 1 żądanie 0
+Serwer 1 otrzymał: Klient 2 żądanie 0
+Serwer 1 otrzymał: Klient 2 żądanie 1
+Serwer 1 otrzymał: Klient 2 żądanie 2
+Serwer 1 otrzymał: Klient 2 żądanie 3
+Serwer 1 otrzymał: Klient 2 żądanie 4
+Serwer 1 otrzymał: Klient 2 żądanie 5
+Serwer 1 otrzymał: Klient 2 żądanie 6
+Serwer 1 otrzymał: Klient 2 żądanie 7
+Serwer 1 otrzymał: Klient 2 żądanie 8
+Serwer 1 otrzymał: Klient 2 żądanie 9
+
+#wydruk z serwera 2:
+Serwer 2 otrzymał: Klient 1 żądanie 1
+Serwer 2 otrzymał: Klient 1 żądanie 2
+Serwer 2 otrzymał: Klient 1 żądanie 3
+Serwer 2 otrzymał: Klient 1 żądanie 4
+Serwer 2 otrzymał: Klient 1 żądanie 5
+Serwer 2 otrzymał: Klient 1 żądanie 6
+Serwer 2 otrzymał: Klient 1 żądanie 7
+Serwer 2 otrzymał: Klient 1 żądanie 8
+Serwer 2 otrzymał: Klient 1 żądanie 9
+

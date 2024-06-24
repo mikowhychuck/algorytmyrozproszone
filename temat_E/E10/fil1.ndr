@@ -1,0 +1,185 @@
+p 475.0 305.0 p0 0 n
+p 660.0 310.0 p1 0 n
+t 390.0 305.0 t2 0 w n
+p 385.0 155.0 p2 1 n
+p 620.0 155.0 je 0 n
+p 745.0 155.0 p5 1 n
+t 570.0 50.0 t3 0 w n
+p 465.0 50.0 p6 0 n
+p 665.0 50.0 p7 0 n
+t 565.0 310.0 t1 0 w n
+p 313.0 708.0 p8 0 w
+t 318.0 433.0 t6 0 w n
+p 318.0 523.0 p9 0 w
+t 313.0 793.0 t7 0 w n
+p 163.0 798.0 p10 1 w
+p 163.0 563.0 {5 je} 0 w
+p 163.0 438.0 p12 1 w
+t 58.0 613.0 t8 0 w n
+p 58.0 718.0 p13 0 w
+p 58.0 518.0 p14 0 w
+t 53.0 798.0 t9 0 w n
+t 53.0 433.0 t10 0 w n
+p 163.0 658.0 {5 myśli} 1 w
+t 318.0 618.0 t11 0 w n
+p 801.0 522.0 p16 0 e
+t 796.0 797.0 t12 0 w n
+p 796.0 707.0 p17 0 e
+t 801.0 437.0 t13 0 w n
+p 951.0 432.0 p18 1 e
+p 951.0 792.0 p20 1 e
+t 1056.0 617.0 t14 0 w n
+p 1056.0 512.0 p21 0 e
+p 1056.0 712.0 p22 0 e
+t 1061.0 797.0 t16 0 w n
+p 951.0 572.0 {2 mysli} 1 e
+t 796.0 612.0 t17 0 w n
+p 750.0 385.0 p25 1 n
+p 781.0 1047.0 p28 0 e
+t 776.0 1322.0 t18 0 w n
+p 776.0 1232.0 p29 0 e
+t 781.0 962.0 t19 0 w n
+p 931.0 957.0 p30 1 e
+p 931.0 1192.0 {3 je} 0 e
+p 931.0 1317.0 p32 1 e
+t 1036.0 1142.0 t20 0 w n
+p 1036.0 1037.0 p33 0 e
+p 1036.0 1237.0 p34 0 e
+t 1041.0 957.0 t21 0 w n
+t 1041.0 1322.0 t22 0 w n
+p 931.0 1097.0 {3 mysli} 1 e
+t 776.0 1137.0 t23 0 w n
+p 770.0 895.0 p27 1 n
+p 320.0 875.0 p26 1 n
+p 353.0 1213.0 p36 0 w
+t 358.0 938.0 t24 0 w n
+p 358.0 1028.0 p37 0 w
+t 353.0 1298.0 t25 0 w n
+p 203.0 1303.0 p38 1 w
+p 203.0 1068.0 {4 je} 0 w
+p 203.0 943.0 p40 1 w
+t 98.0 1118.0 t26 0 w n
+p 98.0 1223.0 p41 0 w
+p 98.0 1023.0 p42 0 w
+t 93.0 1303.0 t27 0 w n
+t 93.0 938.0 t28 0 w n
+p 203.0 1163.0 {4 myśli} 1 w
+t 358.0 1123.0 t29 0 w n
+p 540.0 1385.0 p44 1 n
+p 340.0 365.0 p24 1 n
+t 735.0 270.0 t0 0 w n
+t 1061.0 367.0 t15 0 w n
+t 335.0 55.0 t4 0 w n
+t 835.0 60.0 t5 0 w n
+p 951.0 667.0 {2 je} 0 e
+n 545.0 20.0 n4 1 {zaczyna myslec}
+n 530.0 335.0 n7 1 {zaczyna jeść}
+n 355.0 380.0 n8 1 {widelec jest wolny}
+n 635.0 415.0 n9 1 {widelec jest wolny}
+n 345.0 875.0 n10 1 {widelec jest wolny}
+n 640.0 890.0 n11 1 {widelec jest wolny}
+n 505.0 1340.0 n12 1 {widelec jest wolny}
+p 525.0 155.0 mysli 1 n
+e t16 p27 1 n
+e t21 p27 1 n
+e p27 t19 1 n
+e p27 t12 1 n
+e t22 p44 1 n
+e t27 p44 1 n
+e p44 t18 1 n
+e p44 t25 1 n
+e t9 p26 1 n
+e t28 p26 1 n
+e p26 t24 1 n
+e p26 t7 1 n
+e t15 p25 1 n
+e t5 p25 1 n
+e p25 t13 1 n
+e p25 t0 1 n
+e t10 p24 1 n
+e t4 p24 1 n
+e p24 t6 1 n
+e p24 t2 1 n
+e p40 t24 1 n
+e p38 t25 1 n
+e t28 p40 1 n
+e t27 p38 1 n
+e p41 t27 1 n
+e p42 t28 1 n
+e t26 p42 1 n
+e t26 p41 1 n
+e {4 myśli} t29 1 n
+e t26 {4 myśli} 1 n
+e {4 je} t26 1 n
+e t29 {4 je} 1 n
+e p37 t29 1 n
+e t24 p37 1 n
+e p36 t29 1 n
+e t25 p36 1 n
+e t19 p28 1 n
+e p28 t23 1 n
+e t18 p29 1 n
+e p29 t23 1 n
+e t23 {3 je} 1 n
+e {3 je} t20 1 n
+e t20 {3 mysli} 1 n
+e {3 mysli} t23 1 n
+e t20 p33 1 n
+e t20 p34 1 n
+e p34 t22 1 n
+e p33 t21 1 n
+e t21 p30 1 n
+e t22 p32 1 n
+e p30 t19 1 n
+e p32 t18 1 n
+e t13 p16 1 n
+e p16 t17 1 n
+e t12 p17 1 n
+e p17 t17 1 n
+e t17 {2 je} 1 n
+e {2 je} t14 1 n
+e t14 {2 mysli} 1 n
+e {2 mysli} t17 1 n
+e t14 p21 1 n
+e t14 p22 1 n
+e p22 t16 1 n
+e p21 t15 1 n
+e t15 p18 1 n
+e t16 p20 1 n
+e p18 t13 1 n
+e p20 t12 1 n
+e t7 p8 1 n
+e p8 t11 1 n
+e t6 p9 1 n
+e p9 t11 1 n
+e t11 {5 je} 1 n
+e {5 je} t8 1 n
+e t8 {5 myśli} 1 n
+e {5 myśli} t11 1 n
+e t8 p13 1 n
+e t8 p14 1 n
+e p14 t10 1 n
+e p13 t9 1 n
+e t9 p10 1 n
+e t10 p12 1 n
+e p10 t7 1 n
+e p12 t6 1 n
+e p5 t0 1 n
+e p2 t2 1 n
+e t5 p5 1 n
+e t4 p2 1 n
+e p6 t4 1 n
+e p7 t5 1 n
+e t3 p7 1 n
+e t3 p6 1 n
+e mysli t1 1 n
+e t3 mysli 1 n
+e je t3 1 n
+e t1 je 1 n
+e p1 t1 1 n
+e t0 p1 1 n
+e p0 t1 1 n
+e t2 p0 1 n
+h fil2
+
+

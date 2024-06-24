@@ -1,0 +1,169 @@
+# REQ/REP Server - tcl
+lappend auto_path ./zeromq
+package require zmq 4.0.1
+
+zmq context c1
+zmq socket s1 c1 REP
+s1 bind "tcp://*:7777"
+  #% 
+
+proc handle_req_rep args {
+    set request [s1 recv]
+    puts "REQ/REP received: $request"
+    s1 send "Reply to: $request"
+}
+
+s1 readable handle_req_rep
+
+  #% 
+vwait forever
+
+s1 destroy
+c1 destroy
+
+# REQ/REP Client - python
+
+import zmq
+
+context = zmq.Context()
+
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://localhost:7777")
+
+socket.send(b"Hejka naklejka")
+
+message = socket.recv()
+print("otrzymana odpowiedź: %s" % (message))
+
+/// wydruk
+wydruk po stronie serwera:
+REQ/REP received: Hejka naklejka
+wydruk po stronie klienta:
+otrzymana odpowiedź: b'Reply to: Hejka naklejka'
+
+
+# PUSH Server - tcl
+lappend auto_path ./zeromq
+package require zmq 4.0.1
+
+zmq context c1
+zmq socket s1 c1 PUSH
+s1 bind "tcp://*:8888"
+
+for {set i 0} {$i < 10} {incr i} {
+    set message "Message $i"
+    s1 send $message
+    puts "PUSH sent: $message"
+    after 1000
+}
+
+s1 destroy
+c1 destroy
+
+
+# PULL Client - python
+
+import zmq
+context = zmq.Context()
+
+socket = context.socket(zmq.PULL)
+
+socket.connect("tcp://localhost:8888")
+
+while True:
+    message = socket.recv_string()
+    print(f"PULL received: {message}")
+
+
+/// wydruk
+wydruk z serwera PUSH:
+PUSH sent: Message 0
+PUSH sent: Message 1
+PUSH sent: Message 2
+PUSH sent: Message 3
+PUSH sent: Message 4
+PUSH sent: Message 5
+PUSH sent: Message 6
+PUSH sent: Message 7
+PUSH sent: Message 8
+PUSH sent: Message 9
+
+wydruk z klienta PULL:
+PULL received: Message 0
+PULL received: Message 1
+PULL received: Message 2
+PULL received: Message 3
+PULL received: Message 4
+PULL received: Message 5
+PULL received: Message 6
+PULL received: Message 7
+PULL received: Message 8
+PULL received: Message 9
+
+# PUB Server - tcl
+lappend auto_path ./zeromq
+package require zmq 4.0.1
+
+zmq context c1
+zmq socket s1 c1 PUB
+s1 bind "tcp://*:9999"
+
+proc publish_messages {} {
+    global s1
+    set topic "news"
+    set message "Breaking news at [clock seconds]"
+    s1 send "$topic $message"
+    puts "PUB sent: $topic $message"
+    after 5000 publish_messages
+}
+
+publish_messages
+
+vwait forever
+
+s1 destroy
+c1 destroy
+
+# SUB Client - python
+
+import zmq
+
+context = zmq.Context()
+socket = context.socket(zmq.SUB)
+socket.connect("tcp://localhost:9999")
+topic = "news"
+socket.setsockopt_string(zmq.SUBSCRIBE, topic)
+
+try:
+    while True:
+        message = socket.recv_string()
+        print(f"SUB received: {message}")
+
+except KeyboardInterrupt:
+    print("Interrupted by user")
+
+finally:
+    socket.close()
+    context.term()
+
+/// wydruk 
+Wydruk serwera:
+PUB sent: news Breaking news at 1718209339
+PUB sent: news Breaking news at 1718209344
+PUB sent: news Breaking news at 1718209349
+PUB sent: news Breaking news at 1718209354
+PUB sent: news Breaking news at 1718209359
+PUB sent: news Breaking news at 1718209364
+PUB sent: news Breaking news at 1718209369
+PUB sent: news Breaking news at 1718209374
+PUB sent: news Breaking news at 1718209379
+
+
+wydruk klienta:
+SUB received: news Breaking news at 1718209344
+SUB received: news Breaking news at 1718209349
+SUB received: news Breaking news at 1718209354
+SUB received: news Breaking news at 1718209359
+SUB received: news Breaking news at 1718209364
+
+wydruk klienta jest krótszy, bo najpierw włączyłem serwer a dopiero potem klienta który zasubskrybował serwer

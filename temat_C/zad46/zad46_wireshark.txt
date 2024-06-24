@@ -1,0 +1,1198 @@
+No.     Time           Source                Destination           Protocol Length Info
+      9 12.568895561   127.0.0.1             127.0.0.1             TCP      74     59410 → 7777 [SYN] Seq=0 Win=65495 Len=0 MSS=65495 SACK_PERM=1 TSval=2413481447 TSecr=0 WS=128
+
+Frame 9: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 60
+    Identification: 0x39e9 (14825)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02d1 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 0, Len: 0
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 2827437550
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1010 .... = Header Length: 40 bytes (10)
+    Flags: 0x002 (SYN)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...0 .... = Acknowledgment: Not set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ··········S·]
+    Window: 65495
+    [Calculated window size: 65495]
+    Checksum: 0xfe30 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+        TCP Option - Maximum segment size: 65495 bytes
+        TCP Option - SACK permitted
+        TCP Option - Timestamps: TSval 2413481447, TSecr 0
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 0
+        TCP Option - No-Operation (NOP)
+        TCP Option - Window scale: 7 (multiply by 128)
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 12.568920388   127.0.0.1             127.0.0.1             TCP      74     7777 → 59410 [SYN, ACK] Seq=0 Ack=1 Win=65483 Len=0 MSS=65495 SACK_PERM=1 TSval=2413481447 TSecr=2413481447 WS=128
+
+Frame 10: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 60
+    Identification: 0x0000 (0)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x3cba [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 0, Ack: 1, Len: 0
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 2528345964
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 2827437551
+    1010 .... = Header Length: 40 bytes (10)
+    Flags: 0x012 (SYN, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A··S·]
+    Window: 65483
+    [Calculated window size: 65483]
+    Checksum: 0xfe30 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+        TCP Option - Maximum segment size: 65495 bytes
+        TCP Option - SACK permitted
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+        TCP Option - No-Operation (NOP)
+        TCP Option - Window scale: 7 (multiply by 128)
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 12.568937571   127.0.0.1             127.0.0.1             TCP      66     59410 → 7777 [ACK] Seq=1 Ack=1 Win=65536 Len=0 TSval=2413481447 TSecr=2413481447
+
+Frame 11: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x39ea (14826)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02d8 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 1, Ack: 1, Len: 0
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2827437551
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 2528345965
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 12.569021357   127.0.0.1             127.0.0.1             TCP      76     59410 → 7777 [PSH, ACK] Seq=1 Ack=1 Win=65536 Len=10 TSval=2413481447 TSecr=2413481447
+
+Frame 12: 76 bytes on wire (608 bits), 76 bytes captured (608 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 62
+    Identification: 0x39eb (14827)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02cd [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 1, Ack: 1, Len: 10
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 10]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2827437551
+    [Next Sequence Number: 11    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 2528345965
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe32 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (10 bytes)
+Data (10 bytes)
+
+0000  ff 00 00 00 00 00 00 00 01 7f                     ..........
+    Data: ff00000000000000017f
+    [Length: 10]
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 12.569027021   127.0.0.1             127.0.0.1             TCP      66     7777 → 59410 [ACK] Seq=1 Ack=11 Win=65536 Len=0 TSval=2413481447 TSecr=2413481447
+
+Frame 13: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x30f4 (12532)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0bce [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 1, Ack: 11, Len: 0
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2528345965
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 11    (relative ack number)
+    Acknowledgment number (raw): 2827437561
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 12.569178243   127.0.0.1             127.0.0.1             TCP      77     7777 → 59410 [PSH, ACK] Seq=1 Ack=11 Win=65536 Len=11 TSval=2413481447 TSecr=2413481447
+
+Frame 14: 77 bytes on wire (616 bits), 77 bytes captured (616 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 63
+    Identification: 0x30f5 (12533)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0bc2 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 1, Ack: 11, Len: 11
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 11]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 2528345965
+    [Next Sequence Number: 12    (relative sequence number)]
+    Acknowledgment Number: 11    (relative ack number)
+    Acknowledgment number (raw): 2827437561
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe33 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (11 bytes)
+Data (11 bytes)
+
+0000  ff 00 00 00 00 00 00 00 01 7f 03                  ...........
+    Data: ff00000000000000017f03
+    [Length: 11]
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 12.569192922   127.0.0.1             127.0.0.1             TCP      66     59410 → 7777 [ACK] Seq=11 Ack=12 Win=65536 Len=0 TSval=2413481447 TSecr=2413481447
+
+Frame 15: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x39ec (14828)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02d6 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 11, Ack: 12, Len: 0
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 11    (relative sequence number)
+    Sequence Number (raw): 2827437561
+    [Next Sequence Number: 11    (relative sequence number)]
+    Acknowledgment Number: 12    (relative ack number)
+    Acknowledgment number (raw): 2528345976
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 12.569294598   127.0.0.1             127.0.0.1             TCP      120    59410 → 7777 [PSH, ACK] Seq=11 Ack=12 Win=65536 Len=54 TSval=2413481447 TSecr=2413481447
+
+Frame 16: 120 bytes on wire (960 bits), 120 bytes captured (960 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 106
+    Identification: 0x39ed (14829)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x029f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 11, Ack: 12, Len: 54
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 54]
+    Sequence Number: 11    (relative sequence number)
+    Sequence Number (raw): 2827437561
+    [Next Sequence Number: 65    (relative sequence number)]
+    Acknowledgment Number: 12    (relative ack number)
+    Acknowledgment number (raw): 2528345976
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe5e [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481447, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481447
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (54 bytes)
+Data (54 bytes)
+
+0000  03 01 43 55 52 56 45 00 00 00 00 00 00 00 00 00   ..CURVE.........
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00                                 ......
+    Data: 030143555256450000000000000000000000000000000000000000000000000000000000…
+    [Length: 54]
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 12.569517863   127.0.0.1             127.0.0.1             TCP      119    7777 → 59410 [PSH, ACK] Seq=12 Ack=65 Win=65536 Len=53 TSval=2413481448 TSecr=2413481447
+
+Frame 17: 119 bytes on wire (952 bits), 119 bytes captured (952 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 105
+    Identification: 0x30f6 (12534)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0b97 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 12, Ack: 65, Len: 53
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 53]
+    Sequence Number: 12    (relative sequence number)
+    Sequence Number (raw): 2528345976
+    [Next Sequence Number: 65    (relative sequence number)]
+    Acknowledgment Number: 65    (relative ack number)
+    Acknowledgment number (raw): 2827437615
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe5d [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481448, TSecr 2413481447
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481448
+            Timestamp echo reply: 2413481447
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (53 bytes)
+Data (53 bytes)
+
+0000  01 43 55 52 56 45 00 00 00 00 00 00 00 00 00 00   .CURVE..........
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00                                    .....
+    Data: 014355525645000000000000000000000000000000000000000000000000000000000000…
+    [Length: 53]
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 12.569970762   127.0.0.1             127.0.0.1             TCP      268    59410 → 7777 [PSH, ACK] Seq=65 Ack=65 Win=65536 Len=202 TSval=2413481448 TSecr=2413481448
+
+Frame 18: 268 bytes on wire (2144 bits), 268 bytes captured (2144 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 254
+    Identification: 0x39ee (14830)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x020a [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 65, Ack: 65, Len: 202
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 202]
+    Sequence Number: 65    (relative sequence number)
+    Sequence Number (raw): 2827437615
+    [Next Sequence Number: 267    (relative sequence number)]
+    Acknowledgment Number: 65    (relative ack number)
+    Acknowledgment number (raw): 2528346029
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfef2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481448, TSecr 2413481448
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481448
+            Timestamp echo reply: 2413481448
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (202 bytes)
+Data (202 bytes)
+
+0000  04 c8 05 48 45 4c 4c 4f 01 00 00 00 00 00 00 00   ...HELLO........
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 4b 73 7a 17 0a e0 c6 5e 27 9a 0a dd 13 48   ..Ksz....^'....H
+0060  a5 c2 48 10 c7 c0 ed 8f e4 86 10 c9 44 6c 11 79   ..H.........Dl.y
+0070  af 3b 00 00 00 00 00 00 00 01 b1 92 5e 9d 26 a2   .;..........^.&.
+0080  9e f4 19 39 5a 95 4c 3f b9 2c 8b 47 d7 05 df 58   ...9Z.L?.,.G...X
+0090  96 7b 88 33 97 6f 82 8d 8a 6a de 25 11 a2 af 3a   .{.3.o...j.%...:
+00a0  3a cb b1 b8 96 71 d2 5c fc 22 3f f9 be a7 0d 72   :....q.\."?....r
+00b0  8a ee f1 f6 a5 10 7e 5d 9f 9d 5a ff 0e df dc 39   ......~]..Z....9
+00c0  a4 0c d4 3e eb c6 d4 bc 0e 49                     ...>.....I
+    Data: 04c80548454c4c4f01000000000000000000000000000000000000000000000000000000…
+    [Length: 202]
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 12.570557967   127.0.0.1             127.0.0.1             TCP      236    7777 → 59410 [PSH, ACK] Seq=65 Ack=267 Win=65536 Len=170 TSval=2413481449 TSecr=2413481448
+
+Frame 19: 236 bytes on wire (1888 bits), 236 bytes captured (1888 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 222
+    Identification: 0x30f7 (12535)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0b21 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 65, Ack: 267, Len: 170
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 170]
+    Sequence Number: 65    (relative sequence number)
+    Sequence Number (raw): 2528346029
+    [Next Sequence Number: 235    (relative sequence number)]
+    Acknowledgment Number: 267    (relative ack number)
+    Acknowledgment number (raw): 2827437817
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfed2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481449, TSecr 2413481448
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481449
+            Timestamp echo reply: 2413481448
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (170 bytes)
+Data (170 bytes)
+
+0000  04 a8 07 57 45 4c 43 4f 4d 45 d8 20 9e dc 07 0b   ...WELCOME. ....
+0010  21 8a 34 73 a1 d2 fc d2 3f 41 3d a8 60 93 a7 b5   !.4s....?A=.`...
+0020  13 8d d0 f8 6f d1 97 bd fd 1a 76 2a 18 7b 64 6c   ....o.....v*.{dl
+0030  ae f7 d8 95 f9 6d 79 af 05 66 e8 cb 14 61 96 eb   .....my..f...a..
+0040  4a dc 62 34 a9 b1 63 b2 10 7e fd cb 85 d4 f0 13   J.b4..c..~......
+0050  b3 a0 89 ff 07 00 5c eb da 80 11 e6 68 f6 3f 0b   ......\.....h.?.
+0060  ed 72 3c a8 19 3a 1a a3 38 d7 84 c1 4e 38 8f c6   .r<..:..8...N8..
+0070  fd 19 90 49 06 f5 14 9e 12 a9 e0 b3 e9 16 6f ea   ...I..........o.
+0080  a9 08 d2 e0 5c 60 fe 46 42 01 4d 54 aa 88 46 3e   ....\`.FB.MT..F>
+0090  88 25 2e 72 49 70 ee bb 76 bc e5 b2 b1 3b 59 a6   .%.rIp..v....;Y.
+00a0  5a 0e 8b 0f 19 07 41 e5 16 36                     Z.....A..6
+    Data: 04a80757454c434f4d45d8209edc070b218a3473a1d2fcd23f413da86093a7b5138dd0f8…
+    [Length: 170]
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 12.571343397   127.0.0.1             127.0.0.1             TCP      364    59410 → 7777 [PSH, ACK] Seq=267 Ack=235 Win=65536 Len=298 TSval=2413481450 TSecr=2413481449
+
+Frame 20: 364 bytes on wire (2912 bits), 364 bytes captured (2912 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 350
+    Identification: 0x39ef (14831)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x01a9 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 267, Ack: 235, Len: 298
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 298]
+    Sequence Number: 267    (relative sequence number)
+    Sequence Number (raw): 2827437817
+    [Next Sequence Number: 565    (relative sequence number)]
+    Acknowledgment Number: 235    (relative ack number)
+    Acknowledgment number (raw): 2528346199
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xff52 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481450, TSecr 2413481449
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481450
+            Timestamp echo reply: 2413481449
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (298 bytes)
+Data (298 bytes)
+
+0000  06 00 00 00 00 00 00 01 21 08 49 4e 49 54 49 41   ........!.INITIA
+0010  54 45 2d 58 92 9a d0 e9 bd c3 5c 06 e2 a8 f2 2d   TE-X......\....-
+0020  0c 63 c4 06 45 cd be 86 a2 22 e9 5e 51 74 bb fe   .c..E....".^Qt..
+0030  8c 1a 11 1c 0d 94 b5 ff 0a 85 84 99 96 86 85 de   ................
+0040  0a 0f a7 a2 a2 dc 78 e8 c8 75 c9 1e 80 de 8c 2d   ......x..u.....-
+0050  6b 5f 1b 02 c5 61 dc de 50 e3 2a f4 14 e2 f8 73   k_...a..P.*....s
+0060  68 a2 59 6f fe 84 5a b1 0c ef 8c 19 bd b5 2a 4b   h.Yo..Z.......*K
+0070  f7 49 00 00 00 00 00 00 00 02 f5 0b 6f ee 03 df   .I..........o...
+0080  b7 a4 8c 33 9c 13 eb 29 ef ae d8 62 19 c4 91 83   ...3...)...b....
+0090  6b 7c 6b 81 8b 6d 2d 4e 70 ae d6 5a 49 c0 8e 4d   k|k..m-Np..ZI..M
+00a0  58 a9 ee 7f 1e c9 55 d0 ab cf 2d b7 81 ae 1f 86   X.....U...-.....
+00b0  84 94 e8 de 3f 78 0a 89 b5 a1 35 1e b7 41 d5 31   ....?x....5..A.1
+00c0  ee ad 77 63 31 be 76 be 63 2c ec 27 4d 7e e2 90   ..wc1.v.c,.'M~..
+00d0  d8 f5 14 4e 28 db d5 97 56 64 3a ed fe a6 ce c5   ...N(...Vd:.....
+00e0  7f ca ba 96 fb 31 67 04 0c b0 90 d8 bb 26 e1 68   .....1g......&.h
+00f0  d7 ac 56 b1 31 ff 9d fd f6 32 01 d9 1c 4c 40 97   ..V.1....2...L@.
+0100  3a c4 d2 3a 28 22 67 b0 6b 99 05 c6 66 24 8e bf   :..:("g.k...f$..
+0110  38 27 cd 39 5f 21 be 98 b1 0f 03 95 8c 51 33 7a   8'.9_!.......Q3z
+0120  2f 83 71 e9 5b b5 f0 10 82 5f                     /.q.[...._
+    Data: 06000000000000012108494e4954494154452d58929ad0e9bdc35c06e2a8f22d0c63c406…
+    [Length: 298]
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 12.572021844   127.0.0.1             127.0.0.1             TCP      117    7777 → 59410 [PSH, ACK] Seq=235 Ack=565 Win=65536 Len=51 TSval=2413481450 TSecr=2413481450
+
+Frame 21: 117 bytes on wire (936 bits), 117 bytes captured (936 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 103
+    Identification: 0x30f8 (12536)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0b97 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 235, Ack: 565, Len: 51
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 51]
+    Sequence Number: 235    (relative sequence number)
+    Sequence Number (raw): 2528346199
+    [Next Sequence Number: 286    (relative sequence number)]
+    Acknowledgment Number: 565    (relative ack number)
+    Acknowledgment number (raw): 2827438115
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe5b [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481450, TSecr 2413481450
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481450
+            Timestamp echo reply: 2413481450
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (51 bytes)
+Data (51 bytes)
+
+0000  04 31 05 52 45 41 44 59 00 00 00 00 00 00 00 01   .1.READY........
+0010  29 8e be 61 79 95 6b b5 c4 2d 34 2b 29 06 77 f0   )..ay.k..-4+).w.
+0020  e5 d4 3f 14 f0 b6 56 9a fc 69 d4 e9 e5 cc 50 c0   ..?...V..i....P.
+0030  04 ee 3d                                          ..=
+    Data: 04310552454144590000000000000001298ebe6179956bb5c42d342b290677f0e5d43f14…
+    [Length: 51]
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 12.572313432   127.0.0.1             127.0.0.1             TCP      145    59410 → 7777 [PSH, ACK] Seq=565 Ack=286 Win=65536 Len=79 TSval=2413481450 TSecr=2413481450
+
+Frame 22: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 131
+    Identification: 0x39f0 (14832)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0283 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 565, Ack: 286, Len: 79
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 79]
+    Sequence Number: 565    (relative sequence number)
+    Sequence Number (raw): 2827438115
+    [Next Sequence Number: 644    (relative sequence number)]
+    Acknowledgment Number: 286    (relative ack number)
+    Acknowledgment number (raw): 2528346250
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe77 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481450, TSecr 2413481450
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481450
+            Timestamp echo reply: 2413481450
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (79 bytes)
+Data (79 bytes)
+
+0000  00 21 07 4d 45 53 53 41 47 45 00 00 00 00 00 00   .!.MESSAGE......
+0010  00 03 8f 6e a8 c8 0f d3 81 7f c7 ec 96 37 a4 75   ...n.........7.u
+0020  5a 8a 1d 00 2a 07 4d 45 53 53 41 47 45 00 00 00   Z...*.MESSAGE...
+0030  00 00 00 00 04 ac 27 24 49 cc b7 28 b6 88 4b 4b   ......'$I..(..KK
+0040  29 2c 1a 73 68 a8 84 b5 09 a9 71 58 66 c0 33      ),.sh.....qXf.3
+    Data: 0021074d45535341474500000000000000038f6ea8c80fd3817fc7ec9637a4755a8a1d00…
+    [Length: 79]
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 12.572648293   127.0.0.1             127.0.0.1             TCP      153    7777 → 59410 [PSH, ACK] Seq=286 Ack=644 Win=65536 Len=87 TSval=2413481451 TSecr=2413481450
+
+Frame 23: 153 bytes on wire (1224 bits), 153 bytes captured (1224 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 139
+    Identification: 0x30f9 (12537)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0b72 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 286, Ack: 644, Len: 87
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 87]
+    Sequence Number: 286    (relative sequence number)
+    Sequence Number (raw): 2528346250
+    [Next Sequence Number: 373    (relative sequence number)]
+    Acknowledgment Number: 644    (relative ack number)
+    Acknowledgment number (raw): 2827438194
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe7f [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481451, TSecr 2413481450
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481451
+            Timestamp echo reply: 2413481450
+    [Timestamps]
+    [SEQ/ACK analysis]
+    TCP payload (87 bytes)
+Data (87 bytes)
+
+0000  00 21 07 4d 45 53 53 41 47 45 00 00 00 00 00 00   .!.MESSAGE......
+0010  00 02 74 72 57 8e 58 ba a4 24 37 3b fe b5 67 ed   ..trW.X..$7;..g.
+0020  a9 07 ad 00 32 07 4d 45 53 53 41 47 45 00 00 00   ....2.MESSAGE...
+0030  00 00 00 00 03 95 ab 40 f6 48 47 f9 51 a0 86 83   .......@.HG.Q...
+0040  a9 75 cc ce b1 1d 1c ae da 94 15 95 fd a0 45 d9   .u............E.
+0050  03 9b 1c 4b 9b b7 a1                              ...K...
+    Data: 0021074d45535341474500000000000000027472578e58baa424373bfeb567eda907ad00…
+    [Length: 87]
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 12.573229470   127.0.0.1             127.0.0.1             TCP      66     59410 → 7777 [FIN, ACK] Seq=644 Ack=373 Win=65536 Len=0 TSval=2413481451 TSecr=2413481451
+
+Frame 24: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x39f1 (14833)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02d1 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 644, Ack: 373, Len: 0
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 644    (relative sequence number)
+    Sequence Number (raw): 2827438194
+    [Next Sequence Number: 645    (relative sequence number)]
+    Acknowledgment Number: 373    (relative ack number)
+    Acknowledgment number (raw): 2528346337
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x011 (FIN, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...1 = Fin: Set
+        [TCP Flags: ·······A···F]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481451, TSecr 2413481451
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481451
+            Timestamp echo reply: 2413481451
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 12.573308248   127.0.0.1             127.0.0.1             TCP      66     7777 → 59410 [FIN, ACK] Seq=373 Ack=645 Win=65536 Len=0 TSval=2413481451 TSecr=2413481451
+
+Frame 25: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x30fa (12538)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x0bc8 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 7777, Dst Port: 59410, Seq: 373, Ack: 645, Len: 0
+    Source Port: 7777
+    Destination Port: 59410
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 373    (relative sequence number)
+    Sequence Number (raw): 2528346337
+    [Next Sequence Number: 374    (relative sequence number)]
+    Acknowledgment Number: 645    (relative ack number)
+    Acknowledgment number (raw): 2827438195
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x011 (FIN, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...1 = Fin: Set
+        [TCP Flags: ·······A···F]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481451, TSecr 2413481451
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481451
+            Timestamp echo reply: 2413481451
+    [Timestamps]
+    [SEQ/ACK analysis]
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 12.573336491   127.0.0.1             127.0.0.1             TCP      66     59410 → 7777 [ACK] Seq=645 Ack=374 Win=65536 Len=0 TSval=2413481452 TSecr=2413481451
+
+Frame 26: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface lo, id 0
+Ethernet II, Src: 00:00:00_00:00:00 (00:00:00:00:00:00), Dst: 00:00:00_00:00:00 (00:00:00:00:00:00)
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x39f2 (14834)
+    Flags: 0x40, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x02d0 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 127.0.0.1
+    Destination Address: 127.0.0.1
+Transmission Control Protocol, Src Port: 59410, Dst Port: 7777, Seq: 645, Ack: 374, Len: 0
+    Source Port: 59410
+    Destination Port: 7777
+    [Stream index: 0]
+    [Conversation completeness: Complete, WITH_DATA (31)]
+    [TCP Segment Len: 0]
+    Sequence Number: 645    (relative sequence number)
+    Sequence Number (raw): 2827438195
+    [Next Sequence Number: 645    (relative sequence number)]
+    Acknowledgment Number: 374    (relative ack number)
+    Acknowledgment number (raw): 2528346338
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 512
+    [Calculated window size: 65536]
+    [Window size scaling factor: 128]
+    Checksum: 0xfe28 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        TCP Option - No-Operation (NOP)
+        TCP Option - No-Operation (NOP)
+        TCP Option - Timestamps: TSval 2413481452, TSecr 2413481451
+            Kind: Time Stamp Option (8)
+            Length: 10
+            Timestamp value: 2413481452
+            Timestamp echo reply: 2413481451
+    [Timestamps]
+    [SEQ/ACK analysis]
